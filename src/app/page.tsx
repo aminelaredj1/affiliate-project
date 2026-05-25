@@ -1,3 +1,5 @@
+'use client';
+
 import AffiliateProductCard from "@/components/AffiliateProductCard";
 import UGCVideoSection from "@/components/UGCVideoSection";
 
@@ -47,6 +49,38 @@ export default function Home() {
     }
   ];
 
+  const handleSendData = async () => {
+    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
+    if (!webhookUrl) {
+      console.error('Webhook URL is not defined in environment variables.');
+      return;
+    }
+
+    const payload = {
+      message: "تجربة إرسال من موقعي",
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Success:', result);
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
+  };
+
   return (
     <main className="min-h-screen p-8 md:p-16 lg:px-24">
       {/* Header */}
@@ -61,13 +95,21 @@ export default function Home() {
         </p>
       </header>
 
+      {/* Send Data Button */}
+      <div className="mb-8 text-center">
+        <button onClick={handleSendData}
+                className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400">
+          إرسال بيانات التجربة
+        </button>
+      </div>
+
       {/* Product Grid Section */}
       <section className="mb-24">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-navy">Top Reviews</h2>
           <div className="h-1 flex-grow ml-8 bg-[#e8f0f8] shadow-neu-pressed rounded-full hidden md:block"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {products.map((product, index) => (
             <AffiliateProductCard key={index} {...product} />

@@ -1,0 +1,38 @@
+[2026-05-24 15:50:50] [INFO] n8n Controller check started.
+[2026-05-24 15:50:50] [WARN] Workflow 'Product Automation' not found. Available workflows: 
+[2026-05-24 15:53:48] [INFO] n8n Controller check started.
+[2026-05-24 15:53:48] [INFO] Found workflow 'Product Automation' with ID: vLr0IzteVyt2rBrT
+[2026-05-24 15:53:48] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 15:53:48] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/vLr0IzteVyt2rBrT/run - {"message":"POST method not allowed"}
+[2026-05-24 15:53:48] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 15:53:48] [INFO] n8n Controller check complete.
+[2026-05-24 15:59:05] [INFO] n8n Controller check started.
+[2026-05-24 15:59:05] [INFO] Found workflow 'Product Automation' with ID: 6gfHnqxHWN4YySHB
+[2026-05-24 15:59:05] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 15:59:05] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/6gfHnqxHWN4YySHB/run - {"message":"POST method not allowed"}
+[2026-05-24 15:59:05] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 15:59:05] [INFO] n8n Controller check complete.
+[2026-05-24 16:49:03] [INFO] n8n Controller check started.
+[2026-05-24 16:49:04] [INFO] Found workflow 'Product Automation' with ID: 6gfHnqxHWN4YySHB
+[2026-05-24 16:49:04] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 16:49:04] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/6gfHnqxHWN4YySHB/run - {"message":"POST method not allowed"}
+[2026-05-24 16:49:04] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 16:49:04] [INFO] n8n Controller check complete.
+[2026-05-24 17:49:03] [INFO] n8n Controller check started.
+[2026-05-24 17:49:03] [INFO] Found workflow 'Product Automation' with ID: 6gfHnqxHWN4YySHB
+[2026-05-24 17:49:03] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 17:49:03] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/6gfHnqxHWN4YySHB/run - {"message":"POST method not allowed"}
+[2026-05-24 17:49:03] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 17:49:03] [INFO] n8n Controller check complete.
+[2026-05-24 22:49:08] [INFO] n8n Controller check started.
+[2026-05-24 22:49:09] [INFO] Found workflow 'Product Automation' with ID: 6gfHnqxHWN4YySHB
+[2026-05-24 22:49:10] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 22:49:10] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/6gfHnqxHWN4YySHB/run - {"message":"POST method not allowed"}
+[2026-05-24 22:49:10] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 22:49:10] [INFO] n8n Controller check complete.
+[2026-05-24 23:49:03] [INFO] n8n Controller check started.
+[2026-05-24 23:49:03] [INFO] Found workflow 'Product Automation' with ID: 6gfHnqxHWN4YySHB
+[2026-05-24 23:49:03] [WARN] Triggering workflow. Reason: No executions found for this workflow.
+[2026-05-24 23:49:03] [ERROR] API call failed to http://localhost:5678/api/v1/workflows/6gfHnqxHWN4YySHB/run - {"message":"POST method not allowed"}
+[2026-05-24 23:49:03] [INFO] Workflow triggered successfully. Execution ID: 
+[2026-05-24 23:49:03] [INFO] n8n Controller check complete.

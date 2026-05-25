@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  title       String
+  link        String   @unique
+  price       Float
+  niche       String?
+  description String?
+  category    String?
+  aiScore     Int
+  aiReason    String?
+
+  views       Int      @default(0)
+  clicks      Int      @default(0)
+
+  earnings    Float    @default(0)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([aiScore])
+  @@index([createdAt])
+  AffiliateEvent AffiliateEvent[]
+}
+
+model AffiliateEvent {
+  id          String   @id @default(cuid())
+
+  productId   String
+  product     Product  @relation(fields: [productId], references: [id])
+
+  type        String   // "VIEW", "CLICK", "SALE"
+  amount      Float?
+
+  createdAt   DateTime @default(now())
+
+  @@index([productId])
+}
